@@ -1,3 +1,54 @@
+'''
+--------------------Algorithm----------------------------------
+1. Load Data:
+
+Read the data values from your file (like a CSV) and store them in a list.
+2. Sort Data:
+
+Arrange the data values in order from smallest to largest.
+3. Calculate Quartiles:
+
+Q1 (25th percentile): The value that separates the lowest 25% of the data.
+Q2 (50th percentile): The middle value (same as the median).
+Q3 (75th percentile): The value that separates the lowest 75% of the data.
+4. Find Outliers:
+
+IQR (Interquartile Range): Calculate the difference between Q3 and Q1.
+Upper Bound: Q3 + (1.5 * IQR)
+Lower Bound: Q1 - (1.5 * IQR)
+Any values above the upper bound or below the lower bound are considered outliers.
+5. Remove Outliers (Optional):
+
+Create a new list without the outlier values.
+6. Calculate Mean:
+
+Add up all the values (excluding outliers if removed).
+Divide the sum by the total number of values.
+7. Calculate Median:
+
+If there's an odd number of values, the median is the middle value.
+If there's an even number of values, the median is the average of the two middle values.
+8. Calculate Mode:
+
+Create a dictionary to store each value and how many times it appears.
+Go through each value:
+If the value is already in the dictionary, increase its count.
+If not, add the value to the dictionary with a count of 1.
+The value(s) with the highest count is the mode.
+9. Calculate Variance:
+
+For each value, find the difference between the value and the mean, then square that difference.
+Add up all the squared differences.
+Divide the sum by the total number of values minus 1.
+10. Calculate Standard Deviation:
+
+Take the square root of the variance.
+11. Display Results:
+
+Show the calculated quartiles, mean, median, mode, variance, and standard deviation.
+---------------------------------------------------------------
+'''
+
 import pandas as pd
 
 # Initialize variables for mean, median, mode, mode count, and a dictionary for mode calculation

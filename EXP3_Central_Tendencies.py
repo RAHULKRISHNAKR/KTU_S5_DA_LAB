@@ -1,3 +1,35 @@
+'''
+---------------Algorithm---------------------------
+1. Get the Data:
+
+Read the data values from a file (like a CSV) or a list.
+2. Calculate the Mean (Average):
+
+Add up all the data values.
+Divide the sum by the total number of values.
+3. Calculate the Median (Middle Value):
+
+Sort the data values from smallest to largest.
+If there's an odd number of values, the median is the middle value.
+If there's an even number of values, the median is the average of the two middle values.
+4. Calculate the Mode (Most Frequent Value):
+
+Create a dictionary (like a table) to store each value and how many times it appears.
+Go through each data value:
+If the value is already in the dictionary, increase its count.
+If not, add the value to the dictionary with a count of 1.
+Find the value(s) with the highest count in the dictionary – that's the mode.
+5. Show the Results:
+
+Print or display the calculated mean, median, and mode.
+In simpler terms:
+
+Mean: Like finding the average score in a class.
+Median: The middle value when you line up all the values.
+Mode: The value that appears most often.
+----------------------------------------------------------------------------------
+'''
+
 import pandas as pd
 
 # Initialize variables to store mean, median, and mode
