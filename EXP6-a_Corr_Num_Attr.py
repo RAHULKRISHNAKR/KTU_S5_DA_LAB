@@ -51,7 +51,7 @@ import pandas as pd
 import numpy as np
 
 # Read CSV file into DataFrame
-df = pd.read_csv('data/EXP6-a_Corr_Num_Attr.csv')
+df = pd.read_csv('data/Corr_Num_Attr.csv')
 n = len(df)
 
 # Convert columns to lists for manual calculation
