@@ -109,10 +109,26 @@ print("Final Centroids:")
 print(centroids)
 
 # Plot the clusters
+# Get a colormap with 'k' distinct colors from the 'tab10' colormap
+# 'tab10' is a colormap with 10 distinct colors, suitable for categorical data
+# 'k' is the number of clusters, so we get 'k' colors from the colormap
 colors = plt.cm.get_cmap('tab10', k).colors
+
+# Iterate over each cluster and its index
 for i, cluster in enumerate(clusters):
+    # Plot the data points in the cluster
+    # cluster[:, 0] and cluster[:, 1] are the x and y coordinates of the data points
+    # s=100 sets the size of the points
+    # c=[colors[i]] sets the color of the points to the i-th color from the colormap
+    # label=f'Cluster {i+1}' sets the label for the cluster in the legend
     plt.scatter(cluster[:, 0], cluster[:, 1], s=100, c=[colors[i]], label=f'Cluster {i+1}')
+
 # Plot the centroids with a cross marker
+# centroids[:, 0] and centroids[:, 1] are the x and y coordinates of the centroids
+# s=300 sets the size of the centroids
+# c='red' sets the color of the centroids to red
+# marker='x' sets the marker style to a cross
+# label='Centroids' sets the label for the centroids in the legend
 plt.scatter(centroids[:, 0], centroids[:, 1], s=300, c='red', marker='x', label='Centroids')
 
 # Add title and labels to the plot
