@@ -1,3 +1,51 @@
+'''
+Step-by-Step Algorithm for Naive Bayes Classifier
+Input:
+Training data with features (Feature1, Feature2)
+Target variable (Class)
+Test instance for prediction
+Steps:
+Load and Preprocess Data
+
+Read CSV file into DataFrame
+Extract features and target variables
+Store features as numpy array
+Store target/class labels as numpy array
+Calculate Prior Probabilities
+
+Find unique classes in target variable
+Count occurrences of each class
+Calculate prior probability for each class:
+P(class) = count(class) / total_samples
+Calculate Likelihood Probabilities
+
+For each class:
+Select features where target equals current class
+For each feature:
+Find unique values and their counts
+Calculate likelihood for each value:
+P(feature|class) = count(feature_value) / count(class)
+Store likelihoods in dictionary
+Get Test Instance
+
+Accept user input for test features
+Validate input format
+Convert input to numpy array
+Calculate Posterior Probabilities
+
+For each class:
+Calculate log of prior probability
+For each feature in test instance:
+Get likelihood from stored values
+Add log of likelihood to running sum
+Calculate posterior = log(prior) + sum(log(likelihoods))
+Store posterior probability
+Make Prediction
+
+Find class with maximum posterior probability
+Return predicted class
+'''
+
 import pandas as pd
 import numpy as np
 
