@@ -103,7 +103,11 @@ while True:
                 likelihood += np.log(1e-6)  # Smoothing for unseen feature values
         # Calculate the posterior probability for the current class
         posterior = prior + likelihood
+        print("prior of ",cls,": ",prior)
+        print("Likelihood of ",cls,": " ,likelihood)
+        print("Posterior of ",cls,": ",posterior)
         posteriors.append(posterior)
     # Predict the class with the highest posterior probability
+    
     prediction = classes[np.argmax(posteriors)]
     print(f"Predicted Class: {prediction}")
