@@ -174,7 +174,7 @@ def get_user_input():
 # Main function to execute the steps
 def main():
     # Load data from CSV
-    data = load_data('Data/DecisionTree.csv')
+    data = load_data('Data\DesicionTree.csv')
     # Define the attributes
     attributes = ['age', 'income', 'student', 'credit_rating']
     # Build the decision tree
